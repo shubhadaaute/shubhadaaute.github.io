@@ -10,53 +10,86 @@
     <header>
         <div class="sidebar">
             <img src="profile.jpg" alt="Karthik V.">
-            <h1>Shubhada Aute.</h1>
+            <h1>Shubhada</h1>
             <p>PhD Scholar</p>
             <p>Dept. of Computer Science and Engineering</p>
             <p>Indian Institute of Technology Hyderabad</p>
-            <p>E-mail: cs21resch11001@iith.ac.in</p>
+            <p>E-mail: cs21resch14001@iith.ac.in</p>
         </div>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#github">GitHub Repos</a></li>
+                <li><a href="#" data-section="about">About Me</a></li>
+                <li><a href="#" data-section="education">Education</a></li>
+                <li><a href="#" data-section="research">Research</a></li>
+                <li><a href="#" data-section="publications">Publications</a></li>
+                <li><a href="#" data-section="github">GitHub Repos</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="content-section">
             <h2>About Me</h2>
-            <p>.</p>
+            <p>Finding .</p>
         </section>
 
-        <section id="education">
+        <section id="education" class="content-section">
             <h2>Education</h2>
             <ul>
-                <li>BSc</li>
+                <li> BSc</li>
                 <li>MSc</li>
             </ul>
         </section>
 
-        <section id="research">
+        <section id="research" class="content-section">
             <h2>Research</h2>
-            <p>I am broadly interested in Theoretical Computer Science
+            <p>I am broadly interested </p>
+        </section>
 
-        <section id="publications">
+        <section id="publications" class="content-section">
             <h2>Publications</h2>
             <ul>
-                <li>V. para </li>
-                <li>V. sofsem </li>
+                <li> para </li>
+                <li>sofsem </li>
             </ul>
         </section>
 
-            </main>
+    </main>
 
     <footer>
-        <p>© Shubhada.</p>
+        <p>© Shubhada </p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            // Hide all content sections initially
+            contentSections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the "About Me" section by default
+            document.getElementById('about').style.display = 'block';
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default link behavior
+
+                    // Hide all content sections
+                    contentSections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    // Get the section ID from the data attribute
+                    const sectionId = this.getAttribute('data-section');
+
+                    // Show the selected section
+                    document.getElementById(sectionId).style.display = 'block';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

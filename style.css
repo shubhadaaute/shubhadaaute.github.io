@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #0095b6;
+    background-color: #0095b6; /* Updated color */
     color: white;
     padding: 20px;
     width: 250px;
@@ -48,7 +48,7 @@ nav a {
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 20px;
-    background-color: #800080;
+    background-color: #800080; /* Purple for the tabs */
     display: block;
     width: 100%;
     text-align: center;
@@ -61,12 +61,13 @@ nav a:hover {
 main {
     padding: 20px;
     flex-grow: 1;
+    background-color: white;  /* White background for the main content */
 }
 
 section {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: white;
+    /* background-color: white;   Removed from here */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -93,4 +94,5 @@ footer {
 /* Initially hide all content sections */
 .content-section {
     display: none;
+    background-color: white;   /*Set content area to white*/
 }
